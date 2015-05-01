@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
+intro: "Hello world para o Jekyll. E tá sendo muito divertido, confere aí!"
 date:   2015-04-29 13:03:22
 categories: jekyll update
 author: Bruno Konrad
