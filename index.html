@@ -8,10 +8,12 @@ layout: default
 
   <div class="row">
     {% for post in site.posts %}
-      <section class="card six columns">
-        <header style="background-image: url({{ post.image }})">
-          <h1>{{ post.title }}</h1>
-        </header>
+      <section class="card four columns">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <header style="background-image: url({{ post.image }})">
+            <h1>{{ post.title }}</h1>
+          </header>
+        </a>
         <main>
           <h2>{{ post.date | date: "%b %-d, %Y" }}</h2>
           <p>{{ post.intro }}</p>
