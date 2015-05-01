@@ -1,0 +1,75 @@
+/**
+ * Os estilos para os cards do Material Design, se baseando em: http://www.google.com.br/design/spec/components/cards.html#cards-usage
+ */
+
+$min_height: 250px;
+
+$title_size: 26px;
+$info_size: 16px;
+$spacing: 12px;
+
+$default_font_color: #111;
+$light_grey_color: #757575;
+
+$card_font_family: 'Roboto', sans-serif;
+
+
+.card {
+
+  background: white;
+  box-sizing: border-box;
+  font-family: $card_font_family;
+  font-weight: normal;
+  color: $default_font_color;
+  border-radius: 2px;
+  @include material-shadow(2);
+  margin-bottom: $spacing * 2;
+
+  header {
+    min-height: $min_height;
+    background-size: cover;
+    position: relative;
+
+    h1 {
+      position: absolute;
+      bottom: 0;
+      font-size: $title_size;
+      margin: $spacing;
+      color: white;
+    }
+  }
+
+  main {
+
+    padding: $spacing;
+
+    h2 {
+      font-size: $info_size;
+      color: $light_grey_color;
+      margin: 0 0 6px 0;
+    }
+    p {
+      font-size: $info_size;
+      margin: 0;
+    }
+  }
+
+  footer {
+
+    position: relative;
+    width: 100%;
+    height: 46px;
+    overflow: hidden;
+
+    a {
+      position: absolute;
+      width: 100%;
+      padding: $spacing;
+    }
+    a:hover {
+      background-color: #eee;
+      text-decoration: none;
+    }
+  }
+
+}

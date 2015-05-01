@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-intro: "Hello world para o Jekyll. E tá sendo muito divertido, confere aí!"
-date:   2015-04-29 13:03:22
+title:  "Segundo teste"
+intro: "Introduzindo o segundo teste. Hehehehe"
+date:   2015-05-01 02:41:00
 categories: jekyll update
 author: Bruno Konrad
-image: 'https://download.unsplash.com/photo-1429371527702-1bfdc0eeea7d'
+image: 'https://download.unsplash.com/reserve/nqr33LlRR66jA3Ez9mX7_fox-in-the-forest-by-jose-inesta.jpg'
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
