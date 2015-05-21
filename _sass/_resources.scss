@@ -1,12 +1,11 @@
 // colors
-$text-color:       #111;
+$text-color:       #222;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
-
 
 // Fonts
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
