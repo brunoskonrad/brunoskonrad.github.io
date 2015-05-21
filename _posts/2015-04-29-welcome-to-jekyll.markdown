@@ -1,11 +1,9 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-intro: "Hello world para o Jekyll. E tá sendo muito divertido, confere aí!"
 date:   2015-04-29 13:03:22
 categories: jekyll update
 author: Bruno Konrad
-image: 'https://download.unsplash.com/photo-1429371527702-1bfdc0eeea7d'
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

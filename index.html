@@ -2,31 +2,16 @@
 layout: default
 ---
 
-<div class="home container">
+<div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-
-  <div class="row">
-    {% for post in site.posts %}
-      <section class="card four columns">
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <header style="background-image: url({{ post.image }})">
-            <h1>{{ post.title }}</h1>
-          </header>
-        </a>
-        <main>
-          <h2>{{ post.date | date: "%b %-d, %Y" }}</h2>
-          <p>{{ post.intro }}</p>
-        </main>
-        <footer>
-          <a href="{{ post.url | prepend: site.baseurl }}">Leia sobre</a>
-        </footer>
-      </section>
-    {% endfor %}
-  </div>
-
-  <div class="row">
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-  </div>
+  {% for post in site.posts %}
+    <section class="page-post">
+      <h2>{{ post.date | date: "%b %-d, %Y" }}</h2>
+      <a href="{{ post.url | prepend: site.baseurl }}">
+        <h1>{{ post.title }}</h1>
+      </a>
+      <p>{{ post.excerpt }}</p>
+    </section>
+  {% endfor %}
 
 </div>

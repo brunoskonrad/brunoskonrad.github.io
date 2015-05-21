@@ -2,7 +2,7 @@
 title: Bruno Konrad
 email: bruno.skon@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Então, galerinha, apenas um 'Hello World!' para o Jekyll. Oi Jekyll!
+  Powered by Jekyll
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://brunoskonrad.github.io" # the base hostname & protocol for your site
 twitter_username: brunoskonrad
