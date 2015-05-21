@@ -20,12 +20,10 @@
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "resources",
-        "base",
-        "header",
-        "page",
-        "posts",
-        "footer",
-        "syntax-highlighting"
-;
+@import "resources";
+@import "base";
+@import "header";
+@import "page";
+@import "posts";
+@import "footer";
+@import "syntax-highlighting";
