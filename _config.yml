@@ -10,3 +10,4 @@ github_username:  brunoskonrad
 
 # Build settings
 markdown: kramdown
+gems: [bourbon, neat]
