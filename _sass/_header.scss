@@ -2,9 +2,11 @@
  * Site header
  */
 .site-header {
-    border-top: 3.5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    min-height: 300px;
+
+    background-image: url('http://i.imgur.com/MSpIC6J.png');
+    background-size: cover;
+    background-position: center;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -15,12 +17,17 @@
     line-height: 56px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 0;
+    text-shadow: 1px 1px 4px #222;
     float: left;
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: white;
+    }
+
+    &:hover {
+      text-decoration: none;
+      text-shadow: 1px 1px 5px #222;
     }
 }
 
