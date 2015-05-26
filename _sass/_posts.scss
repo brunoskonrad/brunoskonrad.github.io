@@ -18,9 +18,12 @@
   font-weight: bold;
   font-size: 22px;
   margin-top: 0;
+  text-align: center;
+}
 
-  @include media-query($on-laptop) {
-      font-size: 36px;
+@media (min-width: 500px) {
+  .post-title {
+    text-align: left;
   }
 }
 
