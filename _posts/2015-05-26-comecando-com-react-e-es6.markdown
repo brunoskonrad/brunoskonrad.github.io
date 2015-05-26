@@ -10,7 +10,7 @@ O [EcmaScript 6](https://github.com/lukehoban/es6features) tá pra ser lançado 
 ### O que muda?
 
 Para sentir a diferença entre as _duas versões_ do Javascript, segue um Hello World em React escrito em ES5 e em ES6
-```javascript
+{% highlight javascript %}
 // ES5
 var React = require('react');
 
@@ -21,9 +21,9 @@ var HelloWorld = React.createClass({
 });
 
 module.export = HelloWorld;
-```
+{% endhighlight %}
 
-```javascript
+{% highlight javascript %}
 // ES6
 import React from 'react';
 
@@ -34,18 +34,18 @@ class HelloWorld extends React.Component {
 }
 
 export default HelloWorld;
-```
+{% endhighlight %}
 
 ### Como fazer?
 
 Como é uma tarefa que será repetida a cada alteração do seu código-fonte é uma boa ser escrita uma _task_ em algum _task runner_ para Javascript. Nesse post será usado o [Gulp](http://gulpjs.org/) e os seguintes módulos NPM: `browserify`, `babelify` e o `vinyl-source-stream`. Para instalá-los execute no seu terminal:
 
-```bash
+{% highlight bash %}
 npm i --save-dev gulp browserify babelify vinyl-source-stream
-```
+{% endhighlight %}
 
 A task `react` que uso para transpilar de ES6 para ES5.
-```javascript
+{% highlight javascript %}
 // no seu 'gulpfile.js'
 var gulp = require('gulp')
   , browserify = require('browserify')
@@ -66,7 +66,7 @@ gulp.task('react', function() {
   // diretório aonde será exportado o arquivo 'app.js'
   .pipe(gulp.dest('dist/js'));
 });
-```
+{% endhighlight %}
 
 ### Entendendo o que acontece
 
@@ -76,15 +76,15 @@ gulp.task('react', function() {
 - e por fim `pipe(gulp.dest('dist/js'))` exportará o arquivo `app.js` para outro diretório
 
 Para executar a _task_ vá no seu terminal e, tendo o `gulp` instalado, digite:
-```bash
+{% highlight bash %}
 gulp react
-```
+{% endhighlight %}
 Ou, se não tiver saco de toda vez ir até o terminal e executar a task, você pode criar outra task para ficar _observando_ o diretório com os teus arquivos de componentes React!
 
-```javascript
+{% highlight javascript %}
 gulp.task('develop', function() {
   // observa a mudança de qualquer arquivo .jsx na path/to/react
   gulp.watch('path/to/react/**/*.jsx', ['react']);
 });
-```
+{% endhighlight %}
 Só executar `gulp develop` e ir programar! Toda mudança no teu diretório de componentes irá disparar a task `react`
