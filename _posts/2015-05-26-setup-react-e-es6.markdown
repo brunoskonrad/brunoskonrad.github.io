@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Começando com React e ES6"
+title:  "Setup: React e ES6"
 date:   2015-05-26 00:51:00
-tags: react
+tags: setup react
 author: Bruno Konrad
 ---
 O [EcmaScript 6](https://github.com/lukehoban/es6features) tá pra ser lançado oficialmente e irá trazer diversas novidades, muito bem vindas, para o Javascript! Só que ele ainda não será suportado por todos os navegadores e a transição não será instantânea. Mas você pode começar a usá-lo hoje, agora! Te apresento [Babel](https://babeljs.io/), um _transpiler_ de ES6 para ES5. Aqui abordaremos como começar configura-lo junto do [React](https://facebook.github.io/react/), a library para views do Facebook!
@@ -88,3 +88,5 @@ gulp.task('develop', function() {
 });
 {% endhighlight %}
 Só executar `gulp develop` e ir programar! Toda mudança no teu diretório de componentes irá disparar a task `react`
+
+Esses são os passos para configurar a base para um projeto usando React e ES6. Qualquer dúvida, deixa um comentário aí abaixo. Tenho um projeto no Github onde estou testando isso, qualquer dúvida [acessa aí](https://github.com/brunoskonrad/BeerClient)!
