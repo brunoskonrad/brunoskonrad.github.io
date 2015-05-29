@@ -20,7 +20,7 @@ var HelloWorld = React.createClass({
   }
 });
 
-module.export = HelloWorld;
+module.exports = HelloWorld;
 {% endhighlight %}
 
 {% highlight javascript %}
