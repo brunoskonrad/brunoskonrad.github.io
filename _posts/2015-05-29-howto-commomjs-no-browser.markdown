@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Como fazer: Browserify"
-date:   2015-05-28 23:38:00
+date:   2015-05-29 01:11:00
 tags: setup browserify
 author: Bruno Konrad
 ---
