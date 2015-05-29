@@ -2,17 +2,23 @@
  * Site header
  */
 .site-header {
-    min-height: 300px;
+  width: 100%;
+  min-height: 300px;
 
-    background-image: url('http://i.imgur.com/MSpIC6J.png');
-    background-size: cover;
-    background-position: center;
+  background-image: url('http://i.imgur.com/MSpIC6J.png');
+  background-size: cover;
+  background-position: center;
 
-    // Positioning context for the mobile navigation icon
-    position: relative;
-}
+  // Positioning context for the mobile navigation icon
+  position: relative;
 
-.site-title {
+  .site-link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .site-title {
     font-size: 26px;
     line-height: 56px;
     letter-spacing: 2px;
@@ -29,24 +35,13 @@
       text-decoration: none;
       text-shadow: 1px 1px 5px #222;
     }
-}
+  }
 
-.site-nav {
-    float: right;
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-        text-transform: uppercase;
-
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
-    }
+  .site-description {
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px #222;
+    position: absolute;
+    bottom: 0;
+  }
 }
