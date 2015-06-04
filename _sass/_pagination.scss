@@ -1,3 +1,42 @@
+$margin-forward: 8px;
+$page-size: 4px;
+
+@mixin page-background($color: $grey-color-lighter) {
+  background-color: $color;
+  border-radius: 50%;
+}
+
 .pagination {
   text-align: center;
+  position: relative;
+
+  &__previous {
+    margin-right: $margin-forward;
+  }
+
+  &__next {
+    margin-left: $margin-forward;
+  }
+
+  &__page {
+    padding: $page-size $page-size + 5;
+    margin: 0 $margin-forward/4;
+    font-style: normal;
+
+    &:hover {
+      @include page-background($grey-color-light);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    &--current {
+      @include page-background;
+      margin: 0 $margin-forward/2;
+
+      &:hover {
+        cursor: default;
+        @include page-background;
+      }
+    }
+  }
 }
