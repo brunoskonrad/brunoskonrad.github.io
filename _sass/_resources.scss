@@ -9,16 +9,15 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 // Fonts
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
-@import url(http://fonts.googleapis.com/css?family=Arvo);
 
-$base-font-family: 'Arvo', sans-serif;
+$base-font-family: 'Lato', sans-serif;
 $base-title-family: 'Lato', sans-serif;
 
 
 // Sizes
-$base-font-size:   17.5px;
+$base-font-size:   1.2em;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.6;
 
 $spacing-unit:     30px;
 
