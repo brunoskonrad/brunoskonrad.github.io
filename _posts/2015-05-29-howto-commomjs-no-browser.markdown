@@ -29,6 +29,8 @@ fat(5); // 120
 
 Se tu incluir esses arquivos no teu `html` isso não vai funcionar. Mas é pra isso que existe o [Browserify](http://browserify.org/)! Como ele você pode usar as facilidades do `require('whatever')` no seu browser. Então vamos instalar e usar!
 
+**Errata**: não que seja errado, na verdade! Mas existe uma maneira de executar o `browserify` sem instalar globalmente. Lê [aqui]({% post_url 2015-09-09-scripts-npm %}), além de poder automatizar outras tarefas. Vale a pena :stuck_out_tongue_winking_eye:
+
 {% highlight bash %}
 npm install -g browserify
 {% endhighlight %}
