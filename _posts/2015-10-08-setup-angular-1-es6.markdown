@@ -11,7 +11,7 @@ Nessa altura do campeonato a definição da "nova versão" do Javascript já est
 
 O ES2015 trouxe, finalmente, uma forma de separar módulos em arquivos `.js`. Mas o nosso browser pode não reconhecer isso ainda. Para nos auxiliar nesse trabalho iremos usar o [webpack](https://webpack.github.io/).
 
-Para instalá-lo basta executar
+Para instalá-lo basta executar:
 ```
 npm i -g webpack
 ```
@@ -41,11 +41,34 @@ O código está organizado na seguinte estrutura:
 * `build`: fica o compilado do `src`, o `index.html` raiz da aplicação e os templates `html` usados internamente. Importante notar que a referência para os templates é como se estivessem no mesmo nível, e.g: `templates/foo.html`;
 * `specs`: testes da tua aplicação. É interessante seguir a mesma estrutura do diretório de `src`. Os testes devem ter, após o nome do arquivo a ser testado, o sufixo `.spec.js`. Mais [aqui](https://github.com/brunoskonrad/angular-es2015/tree/master/specs);
 * `src`: onde serão escritos o código da aplicação. A estrutura padrão é possuir os `controllers`, as `directives` e os `services`. Porém pode-se adicionar o qeu for preciso, e.g `polyfill`. Na raiz desse diretório fica a `index.js` que é o ponto de entrada para a *compilação* de ES2015 para ES5.
-* `karma.conf.js`: arquivo de configuração do [karma](http://karma-runner.github.io/0.13/index.html);
-* `package.json`: arquivo de projeto node. Criado com `npm init`. Configurações em geral podem ser feitas aqui.
-* `webpack.config.js`: configuração do webpack.
+* `karma.conf.js`: arquivo de [configuração](http://karma-runner.github.io/0.8/config/configuration-file.html) do [karma](http://karma-runner.github.io/0.13/index.html);
+* `package.json`: arquivo de projeto node. Criado com `npm init`. [Configurações](https://docs.npmjs.com/files/package.json) em geral podem ser feitas aqui.
+* `webpack.config.js`: configuração do webpack (mais sobre [aqui](http://webpack.github.io/docs/configuration.html)).
 
 Lembrando que esse é o ponto de partida! Pode e deve ser alterado para a sua necessidade.
+
+Repare que, para cada diretório dentro de `src`, foi criado um `alias` para facilitar a inclusão de arquivos de cada *pacote*, e.g:
+```javascript
+resolve: {
+  alias: {
+    controllers: __dirname + '/src/controllers',
+    services: __dirname + '/src/services',
+    directives: __dirname + '/src/directives'
+  }
+}
+```
+
+Tendo esses `alias` definidos você passa a importar os módulos da seguinte forma:
+
+```javascript
+import HelloWorldCtrl from 'controllers/HelloWorldCtrl';
+
+// Ao invés de
+
+import HelloWorldCtrl from './contorllers/HelloWorldCtrl';
+// ou
+import HelloWorldCtrl from '../../contorllers/HelloWorldCtrl';
+```
 
 
 ## Controllers
