@@ -9,9 +9,58 @@ Nessa altura do campeonato a definição da "nova versão" do Javascript já est
 
 ### Como fazemos isso?
 
-O ES2015 trouxe, finalmente, uma forma de separar módulos em arquivos `.js`. Mas o nosso browser pode não reconhecer isso ainda. Para nos auxiliar nesse trabalho iremos usar o [webpack](https://webpack.github.io/).
+Como vamos trabalhar com Javascript não pode faltar: **node.js**! Se você ainda não tem instalado na sua máquina fica aqui a minha dica de ferramenta para instalação: [nvm](https://github.com/creationix/nvm); se você for de Windows use o [nvmw](https://github.com/hakobera/nvmw).
 
-Para instalá-lo basta executar:
+Vamos começar!
+
+#### Iniciando o projeto
+
+```
+npm init
+```
+
+O comando acima irá criar o seu arquivo `package.json` que será usado para versionar as dependências do seu projeto. Nada mais de baixar o `angular.min.js` e colar numa pasta `lib`. Agora você vai fazer algo como:
+
+```
+npm i --save angular
+```
+
+Isso irá criar um campo `dependencies` no seu *json* de configuração no `package.json` e, nesse campo, estará definido o `angular` com uma versão específica como uma das dependências.
+
+A list de dependências para esse post é esta, porém lembre-se de verificar se estão nas versões mais atuais:
+
+```
+"devDependencies": {
+  "angular-mocks": "^1.4.7",
+  "babel-core": "^5.8.25",
+  "babel-loader": "^5.3.2",
+  "html-loader": "^0.3.0",
+  "jasmine-core": "^2.3.4",
+  "karma": "^0.13.10",
+  "karma-jasmine": "^0.3.6",
+  "karma-phantomjs-launcher": "^0.2.1",
+  "karma-webpack": "^1.7.0",
+  "phantomjs": "^1.9.18",
+  "webpack": "^1.12.2",
+  "webpack-dev-server": "^1.12.1"
+}
+```
+
+Adicione as `devDependencies` depois das suas `dependencies`, no seu `package.json`. Após adicioná-las execute:
+
+```
+npm install
+```
+
+Espere o NPM fazer o trabalho de instalar as suas dependências. para mais informações sobre a configuração para esse post acesse o [`package.json`](https://github.com/brunoskonrad/angular-es2015/blob/master/package.json) do mesmo.
+
+#### Configurando o build system
+
+Enfim o ES2015 trouxe uma forma de separar módulos em arquivos `.js`. Mas o nosso browser pode não reconhecer isso ainda. Para nos auxiliar nesse trabalho iremos usar o [webpack](https://webpack.github.io/).
+
+Você pode instalá-lo globalmente e usar via terminal ou, como eu prefiro, [usando os `scripts` do seu `package.json`]({% post_url 2015-09-09-scripts-npm %}).
+
+Se quiser instalar globalmente, execute a linha abaixo
 ```
 npm i -g webpack
 ```
@@ -136,9 +185,11 @@ describe('HelloWorldCtrl', () => {
 
 ## Services
 
+TODO
 
 ## Directives
 
+TODO
 
 <hr />
 
