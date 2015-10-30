@@ -22,17 +22,17 @@ O código está organizado na seguinte estrutura:
 
 ```
 |-- build
-    |-- templates
-    |-- index.html
+|   |-- templates
+|   |-- index.html
 |-- specs
-    |-- controllers
-    |-- directives
-    |-- services
+|   |-- controllers
+|   |-- directives
+|   |-- services
 |-- src
-    |-- controllers
-    |-- directives
-    |-- services
-    |-- index.js
+|   |-- controllers
+|   |-- directives
+|   |-- services
+|   |-- index.js
 |-- karma.conf.js
 |-- package.json
 |-- wepack.config.js
@@ -84,8 +84,71 @@ export default class HelloWorldCtrl {
 }
 ```
 
-Definimos e exportamos como padrão a classe [`HelloWorldCtrl`](https://github.com/brunoskonrad/angular-es2015/blob/master/src/controllers/HelloWorldCtrl.js)
+No código acima definimos e exportamos como padrão a classe [`HelloWorldCtrl`](https://github.com/brunoskonrad/angular-es2015/blob/master/src/controllers/HelloWorldCtrl.js)
+
+Os testes em angular possuem algumas configurações para a injeção das dependências. Segue abaixo o teste para o `HelloWorldCtrl` (pode acessá-lo [aqui](https://github.com/brunoskonrad/angular-es2015/blob/master/specs/controllers/HelloWorldCtrl.spec.js))
+
+```javascript
+let subject;
+let $controller;
+let $rootScope;
+let scope;
+let Foo;
+
+describe('HelloWorldCtrl', () => {
+  // Definimos o módulo que será carregado
+  beforeEach(angular.mock.module('hello-world.controllers'));
+
+  // Pegamos as referências para as dependências de nosso controller.
+  // Note o `_` entre as dependências: isso é um truque para conseguirmos
+  // manter o mesmo nome localmente. e.g `let Foo = _Foo_`
+  beforeEach(angular.mock.inject((_$controller_, _Foo_, _$rootScope_) => {
+    $controller = _$controller_;
+    $rootScope = _$rootScope_;
+    Foo = _Foo_;
+  }));
+
+  // Antes de cada teste iremos iniciar um novo `scope`
+  // e instanciar o controller que iremos testar usando o $controller,
+  // injetando as dependências para o teste
+  beforeEach(() => {
+    scope = $rootScope.$new();
+    subject = $controller('HelloWorldCtrl', {
+      $scope: scope,
+      Foo
+    });
+  });
+
+  it('get the `hello` property as `world`', () => {
+    expect(scope.hello).toBe('world');
+  });
+
+  it('access the `foo` property', () => {
+    spyOn(Foo, 'getFoo').and.returnValue('foo');
+
+    scope.$digest();
+
+    expect(scope.foo).toBe('foo');
+  });
+});
+
+```
+
+## Services
+
+
+## Directives
+
 
 <hr />
 
 O código base pode ser acessado em: https://github.com/brunoskonrad/angular-es2015
+
+Leitura recomendada sobre boas práticas com angular: [Sane, scalable Angular apps are tricky, but not impossible. Lessons learned from PayPal Checkout.](https://medium.com/@bluepnume/sane-scalable-angular-apps-are-tricky-but-not-impossible-lessons-learned-from-paypal-checkout-c5320558d4ef)
+
+Referência em inglês de angular 1.x com ES6 e webpack: http://angular-tips.com/blog/2015/06/using-angular-1-dot-x-with-es6-and-webpack/
+
+Referências para testes:
+* http://www.sitepoint.com/mocking-dependencies-angularjs-tests/;
+* http://www.sitepoint.com/unit-testing-angularjs-services-controllers-providers/;
+* http://andyshora.com/unit-testing-best-practices-angularjs.html;
