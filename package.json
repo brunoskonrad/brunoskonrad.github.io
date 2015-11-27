@@ -1,0 +1,19 @@
+{
+  "name": "brunoskonrad.github.io",
+  "version": "1.0.0",
+  "description": "My personal site",
+  "main": "index.html",
+  "scripts": {
+    "build:sass": "node-sass sass/konrad.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunoskonrad/brunoskonrad.github.io.git"
+  },
+  "author": "Bruno Konrad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunoskonrad/brunoskonrad.github.io/issues"
+  },
+  "homepage": "http://www.brunokonrad.com"
+}

@@ -1,17 +1,32 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bruno Konrad</title>
 
-<div class="home">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+  <header class="greetings">
+    <h1 class="greetings__name">Bruno Konrad</h1>
+    <h2 class="greetings__role">Mobile & Front-end</h2>
+  </header>
 
-  {% for post in site.posts %}
-    <section class="page-post">
-      <h2>{{ post.date | date: "%b %-d, %Y" }}</h2>
-      <a href="{{ post.url | prepend: site.baseurl }}">
-        <h1>{{ post.title }}</h1>
-      </a>
-      <p>{{ post.excerpt }}</p>
-    </section>
-  {% endfor %}
-
-</div>
+  <footer class="find-me">
+    <ul class="find-me__list">
+      <li class="find-me__item">
+        <a target="_blank" href="https://twitter.com/brunoskonrad">twitter</a>
+      </li>
+      <li class="find-me__item">
+        <a target="_blank" href="https://medium.com/@brunokonrad">medium</a>
+      </li>
+      <li class="find-me__item">
+        <a target="_blank" href="https://github.com/brunoskonrad">github</a>
+      </li>
+      <li class="find-me__item">
+        <a href="mailto:bruno.skon@gmail.com">bruno.skon@gmail.com</a>
+      </li>
+    </ul>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+// Color palethe
+$color-purple: #8C489F;
+$color-purple-dark: #443266;
+$color-purple-very-light: #C3C3E5;
+$color-almost-white: #F1F0FF;
+$color-white: #fefefe;
+
+// Breakpoints
+$breakpoint-small: 480px;
+$breakpoint-medium: 696px;
+$breakpoint-large: 976px;
+
+//
+@font-face {
+  font-family: 'Varela Round';
+  src: url('../assets/VarelaRound-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Odin Rounded Bold';
+  src: url('../assets/odin-rounded.bold.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'Odin Rounded Light';
+  src: url('../assets/odin-rounded.light.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'Odin Rounded';
+  src: url('../assets/odin-rounded.regular.otf') format('opentype')
+}
