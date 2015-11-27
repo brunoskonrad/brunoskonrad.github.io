@@ -1,0 +1,51 @@
+%default-link {
+  color: $color-white;
+  text-decoration: none;
+}
+
+.find-me {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+
+  text-align: center;
+  font-size: 22px;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 40px;
+    margin-top: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    @extend %default-link;
+
+    &:visited {
+      @extend %default-link;
+    }
+
+    &:hover {
+      text-shadow: 0px 0px 10px $color-white;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .find-me {
+    &__item {
+      margin-right: 20px;
+      margin-top: 0;
+    }
+  }
+}

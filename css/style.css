@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'Varela Round';
+  src: url("../assets/VarelaRound-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Odin Rounded Bold';
+  src: url("../assets/odin-rounded.bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Odin Rounded Light';
+  src: url("../assets/odin-rounded.light.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Odin Rounded';
+  src: url("../assets/odin-rounded.regular.otf") format("opentype"); }
+
+.greetings {
+  font-size: 26px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  left: 0;
+  text-align: center; }
+  .greetings__name {
+    text-transform: uppercase;
+    font-family: 'Odin Rounded Bold';
+    font-size: 1.6em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0; }
+  .greetings__role {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 2.3px; }
+
+@media screen and (min-width: 696px) {
+  .greetings {
+    font-size: 28px;
+    top: 50%; } }
+
+@media screen and (min-width: 976px) {
+  .greetings {
+    font-size: 30px; } }
+
+.find-me a, .find-me a:visited {
+  color: #fefefe;
+  text-decoration: none; }
+
+.find-me {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  text-align: center;
+  font-size: 22px; }
+  .find-me__list {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .find-me__item {
+    display: inline-block;
+    margin-right: 40px;
+    margin-top: 30px; }
+    .find-me__item:last-child {
+      margin-right: 0; }
+  .find-me a:hover {
+    text-shadow: 0px 0px 10px #fefefe; }
+
+@media screen and (min-width: 696px) {
+  .find-me__item {
+    margin-right: 20px;
+    margin-top: 0; } }
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../assets/background.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Odin Rounded Light', 'Varela Round', sans-serif;
+  color: #fefefe; }
