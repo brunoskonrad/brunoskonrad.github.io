@@ -43,10 +43,6 @@
   .greetings {
     font-size: 30px; } }
 
-.find-me a, .find-me a:visited {
-  color: #fefefe;
-  text-decoration: none; }
-
 .find-me {
   position: absolute;
   bottom: 20px;
@@ -60,12 +56,10 @@
     margin: 0; }
   .find-me__item {
     display: inline-block;
-    margin-right: 40px;
+    margin-left: 40px;
     margin-top: 30px; }
-    .find-me__item:last-child {
-      margin-right: 0; }
-  .find-me a:hover {
-    text-shadow: 0px 0px 10px #fefefe; }
+    .find-me__item:first-child {
+      margin-left: 0; }
 
 @media screen and (min-width: 696px) {
   .find-me__item {
@@ -80,4 +74,16 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../assets/background.jpeg") no-repeat center center fixed;
   background-size: cover;
   font-family: 'Odin Rounded Light', 'Varela Round', sans-serif;
-  color: #fefefe; }
+  color: #fefefe;
+  margin: 0; }
+
+a, a:visited {
+  color: #fefefe;
+  text-decoration: none; }
+
+a {
+  transition: text-shadow 150ms ease-in-out; }
+  a:active {
+    text-shadow: 0px 0px 15px #fefefe; }
+  a:hover {
+    text-shadow: 0px 0px 10px #fefefe; }

@@ -1,8 +1,3 @@
-%default-link {
-  color: $color-white;
-  text-decoration: none;
-}
-
 .find-me {
   position: absolute;
   bottom: 20px;
@@ -20,23 +15,11 @@
 
   &__item {
     display: inline-block;
-    margin-right: 40px;
+    margin-left: 40px;
     margin-top: 30px;
 
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  a {
-    @extend %default-link;
-
-    &:visited {
-      @extend %default-link;
-    }
-
-    &:hover {
-      text-shadow: 0px 0px 10px $color-white;
+    &:first-child {
+      margin-left: 0;
     }
   }
 }
