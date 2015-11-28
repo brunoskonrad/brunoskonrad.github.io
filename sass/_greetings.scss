@@ -1,9 +1,9 @@
 .greetings {
   font-size: 26px;
   position: absolute;
-  top: 20px;
-  right: 0;
-  left: 0;
+  top: $size-spacing;
+  right: $size-spacing;
+  left: $size-spacing;
   text-align: center;
 
   &__name {

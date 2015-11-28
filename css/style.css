@@ -18,8 +18,8 @@
   font-size: 26px;
   position: absolute;
   top: 20px;
-  right: 0;
-  left: 0;
+  right: 20px;
+  left: 20px;
   text-align: center; }
   .greetings__name {
     text-transform: uppercase;

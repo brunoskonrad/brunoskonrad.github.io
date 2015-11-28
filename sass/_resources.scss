@@ -10,11 +10,8 @@ $breakpoint-small: 480px;
 $breakpoint-medium: 696px;
 $breakpoint-large: 976px;
 
-//
-@font-face {
-  font-family: 'Varela Round';
-  src: url('../assets/VarelaRound-Regular.ttf') format('truetype');
-}
+
+$size-spacing: 20px;
 
 @font-face {
   font-family: 'Odin Rounded Bold';
