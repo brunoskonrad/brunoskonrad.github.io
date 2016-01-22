@@ -1,8 +1,4 @@
 @font-face {
-  font-family: 'Varela Round';
-  src: url("../assets/VarelaRound-Regular.ttf") format("truetype"); }
-
-@font-face {
   font-family: 'Odin Rounded Bold';
   src: url("../assets/odin-rounded.bold.otf") format("opentype"); }
 
@@ -14,12 +10,16 @@
   font-family: 'Odin Rounded';
   src: url("../assets/odin-rounded.regular.otf") format("opentype"); }
 
+@font-face {
+  font-family: 'Andika New Basic';
+  src: url("../assets/AndikaNewBasic.ttf") format("truetype"); }
+
 .greetings {
   font-size: 26px;
   position: absolute;
-  top: 20px;
-  right: 20px;
-  left: 20px;
+  top: 32px;
+  right: 32px;
+  left: 32px;
   text-align: center; }
   .greetings__name {
     text-transform: uppercase;
@@ -30,14 +30,18 @@
     margin: 0; }
   .greetings__role {
     font-size: 1em;
+    font-family: 'Andika New Basic', sans-serif;
     padding: 0;
     margin: 0;
+    margin-top: 24px;
     letter-spacing: 2.3px; }
 
 @media screen and (min-width: 696px) {
   .greetings {
     font-size: 28px;
-    top: 50%; } }
+    top: 50%; }
+    .greetings__role {
+      margin-top: 0; } }
 
 @media screen and (min-width: 976px) {
   .greetings {
@@ -45,7 +49,7 @@
 
 .find-me {
   position: absolute;
-  bottom: 20px;
+  bottom: 32px;
   right: 0;
   left: 0;
   text-align: center;

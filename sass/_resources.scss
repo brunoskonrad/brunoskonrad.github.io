@@ -11,7 +11,7 @@ $breakpoint-medium: 696px;
 $breakpoint-large: 976px;
 
 
-$size-spacing: 20px;
+$size-spacing: 32px;
 
 @font-face {
   font-family: 'Odin Rounded Bold';
@@ -26,4 +26,9 @@ $size-spacing: 20px;
 @font-face {
   font-family: 'Odin Rounded';
   src: url('../assets/odin-rounded.regular.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'Andika New Basic';
+  src: url('../assets/AndikaNewBasic.ttf') format('truetype');
 }
