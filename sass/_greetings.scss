@@ -1,0 +1,28 @@
+.greetings {
+  font-family: 'Roboto Mono', monospace;
+  vertical-align: top;
+
+  &__name {
+    color: $color-gray-2;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  &__role {
+    color: $color-gray-1;
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .greetings {
+    &__name {
+      font-size: 1.6rem;
+    }
+
+    &__role {
+      font-size: 2.2rem;
+    }
+  }
+}

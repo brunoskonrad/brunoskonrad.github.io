@@ -10,10 +10,9 @@ gulp.task('build:scss', function() {
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./css/'));
+    .pipe(gulp.dest('./css/'))
+    .pipe(browserSync.stream());
 });
-
-gulp.task('watch', ['build:scss'], browserSync.reload);
 
 gulp.task('browser-sync', ['build:scss'], function() {
   browserSync.init({
@@ -22,7 +21,8 @@ gulp.task('browser-sync', ['build:scss'], function() {
     }
   });
 
-  gulp.watch('./sass/**/*.scss', ['watch']);
+  gulp.watch('./sass/*.scss', ['build:scss']);
+  gulp.watch('*.html', browserSync.reload);
 });
 
 gulp.task('default', ['browser-sync']);

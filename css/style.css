@@ -1,4 +1,151 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 body {
-  background-color: white; }
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.container {
+  max-width: 660px;
+  padding: 0 1rem;
+  margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap column;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column; }
+
+.section {
+  margin-bottom: 3rem; }
+  .section:first-child {
+    margin-top: 3rem; }
+
+@media (min-width: 760px) {
+  .section {
+    margin-bottom: 6rem; }
+    .section:last-child {
+      margin-bottom: 3rem; } }
+
+.greetings {
+  font-family: 'Roboto Mono', monospace;
+  vertical-align: top; }
+  .greetings__name {
+    color: #8b8687;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase; }
+  .greetings__role {
+    color: #333030;
+    font-size: 1.8rem; }
+
+@media (min-width: 760px) {
+  .greetings__name {
+    font-size: 1.6rem; }
+  .greetings__role {
+    font-size: 2.2rem; } }
+
+.about__children, .about__list li {
+  font-size: 1.3rem;
+  line-height: 1.9rem; }
+
+.about {
+  font-family: 'Noto Serif', serif;
+  color: #636363; }
+  .about__children {
+    margin-bottom: 1rem; }
+    .about__children:last-child {
+      margin-bottom: 0; }
+  .about__list {
+    margin: 2rem 0;
+    list-style: inside; }
+    .about__list li {
+      margin: 1rem 0; }
+
+.selfie {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 3rem;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center; }
+
+@media (min-width: 760px) {
+  .about__children {
+    font-size: 1.4rem;
+    line-height: 2.1rem; } }
+
+.find-me__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap row;
+      -ms-flex-flow: wrap row;
+          flex-flow: wrap row;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  font-size: 1.3rem;
+  font-family: 'Roboto Mono', monospace; }
+
+.find-me li {
+  height: 48px;
+  min-width: 80px;
+  padding: 0 1rem; }
+
+:root {
+  font-size: 16px; }
+
+body {
+  background-color: #fbfbfb; }
+
+i {
+  font-style: italic; }
+
+b {
+  font-weight: 700; }
 
 /*# sourceMappingURL=style.css.map */

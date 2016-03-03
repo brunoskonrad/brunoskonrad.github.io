@@ -1,0 +1,25 @@
+.container {
+  max-width: 660px;
+  padding: 0 1rem;
+  margin: auto;
+  display: flex;
+  flex-flow: wrap column;
+}
+
+.section {
+  margin-bottom: 3rem;
+
+  &:first-child {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .section {
+    margin-bottom: 6rem;
+
+    &:last-child {
+      margin-bottom: 3rem;
+    }
+  }
+}
