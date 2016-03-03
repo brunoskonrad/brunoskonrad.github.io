@@ -68,6 +68,33 @@ table {
     .section:last-child {
       margin-bottom: 3rem; } }
 
+.read-in__portuguese:before, .read-in__english:before {
+  content: ' ';
+  width: 28px;
+  height: 24px;
+  background-size: 28px;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0; }
+
+.read-in {
+  height: 20px;
+  padding-right: 36px;
+  margin-bottom: 2rem;
+  display: inline-block;
+  position: relative;
+  text-align: right;
+  line-height: 20px;
+  font-family: 'Roboto Mono', monospace; }
+  .read-in:first-child {
+    margin-top: 1rem; }
+  .read-in__portuguese:before {
+    background-image: url("/assets/br.png"); }
+  .read-in__english:before {
+    background-image: url("/assets/uk.png"); }
+
 .greetings {
   font-family: 'Roboto Mono', monospace;
   vertical-align: top; }
@@ -115,6 +142,9 @@ table {
 @media (min-width: 760px) {
   .about__children {
     font-size: 1.4rem;
+    line-height: 2.1rem; }
+  .about__list li {
+    font-size: 1.4rem;
     line-height: 2.1rem; } }
 
 .find-me__list {
@@ -142,10 +172,7 @@ table {
 body {
   background-color: #fbfbfb; }
 
-i {
+em {
   font-style: italic; }
-
-b {
-  font-weight: 700; }
 
 /*# sourceMappingURL=style.css.map */
