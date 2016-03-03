@@ -4,7 +4,8 @@
   "description": "My personal site",
   "main": "index.html",
   "scripts": {
-    "build:sass": "node-sass sass/konrad.scss css/style.css"
+    "build:sass": "node-sass sass/konrad.scss css/style.css",
+    "dev": "gulp"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/brunoskonrad/brunoskonrad.github.io/issues"
   },
-  "homepage": "http://www.brunokonrad.com"
+  "homepage": "http://www.brunokonrad.com",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0"
+  }
 }

@@ -1,0 +1,16 @@
+.find-me {
+  &__list {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+
+    font-size: 1.3rem;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  li {
+    height: 48px;
+    min-width: 80px;
+    padding: 0 1rem;
+  }
+}

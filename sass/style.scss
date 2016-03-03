@@ -1,0 +1,23 @@
+@import 'reset';
+@import 'variables';
+
+@import 'container';
+@import 'greetings';
+@import 'about';
+@import 'footer';
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  background-color: #fbfbfb;
+}
+
+i {
+  font-style: italic;
+}
+
+b {
+  font-weight: 700;
+}
