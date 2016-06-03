@@ -11,7 +11,7 @@ gulp.task('build:scss', function() {
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./css/'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 gulp.task('browser-sync', ['build:scss'], function() {
@@ -22,7 +22,6 @@ gulp.task('browser-sync', ['build:scss'], function() {
   });
 
   gulp.watch('./sass/*.scss', ['build:scss']);
-  gulp.watch('*.html', browserSync.reload);
 });
 
 gulp.task('default', ['browser-sync']);
