@@ -35,6 +35,9 @@ $selfie-size: 120px;
   border-radius: 50%;
   margin-bottom: 3rem;
   align-self: center;
+  background-image: url('../assets/yo.jpg');
+  background-size: cover;
+  background-position: top;
 }
 
 @media (min-width: $breakpoint-desktop) {

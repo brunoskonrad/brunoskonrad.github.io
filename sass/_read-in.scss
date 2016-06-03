@@ -1,43 +1,12 @@
-$flag-width: 28px;
-$flag-height: 20px;
-
-%flag {
-  content: ' ';
-  width: $flag-width;
-  height: 24px;
-  background-size: $flag-width;
-  background-repeat: no-repeat;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 0;
-}
-
 .read-in {
-  height: $flag-height;
-  padding-right: $flag-width + 8px;
+  height: 20px;
   margin-bottom: 2rem;
   display: inline-block;
   position: relative;
   text-align: right;
-  line-height: $flag-height;
   font-family: 'Roboto Mono', monospace;
 
   &:first-child {
     margin-top: 1rem;
-  }
-
-  &__portuguese {
-    &:before {
-      @extend %flag;
-      background-image: url('/assets/br.png');
-    }
-  }
-
-  &__english {
-    &:before {
-      @extend %flag;
-      background-image: url('/assets/uk.png');
-    }
   }
 }
