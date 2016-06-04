@@ -13,8 +13,6 @@
 
   <title>Bruno Konrad</title>
 
-  <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
@@ -90,5 +88,19 @@
     ga('send', 'pageview');
 
   </script>
+
+  <!-- loads Noto Sefif and Roboto Mono google font -->
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Noto+Serif:700,400italic,400:latin', 'Roboto+Mono:400,300:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
 </body>
 </html>
