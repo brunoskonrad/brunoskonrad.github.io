@@ -7,12 +7,8 @@
 @import 'about';
 @import 'footer';
 
-:root {
-  font-size: 16px;
-}
-
 body {
-  background-color: #fbfbfb;
+  background-color: $color-almost-white;
 }
 
 em {

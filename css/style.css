@@ -50,12 +50,10 @@ table {
   padding: 0 1rem;
   margin: auto;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: wrap column;
-      -ms-flex-flow: wrap column;
-          flex-flow: wrap column; }
+  -ms-flex-flow: wrap column;
+      flex-flow: wrap column; }
 
 .section {
   margin-bottom: 3rem; }
@@ -118,9 +116,8 @@ table {
   height: 120px;
   border-radius: 50%;
   margin-bottom: 3rem;
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   background-image: url("../assets/yo.jpg");
   background-size: cover;
   background-position: top; }
@@ -135,15 +132,12 @@ table {
 
 .find-me__list {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: wrap row;
-      -ms-flex-flow: wrap row;
-          flex-flow: wrap row;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -ms-flex-flow: wrap row;
+      flex-flow: wrap row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   font-size: 1.3rem;
   font-family: 'Roboto Mono', monospace; }
 
@@ -152,11 +146,8 @@ table {
   min-width: 80px;
   padding: 0 1rem; }
 
-:root {
-  font-size: 16px; }
-
 body {
-  background-color: #fbfbfb; }
+  background-color: #fefefe; }
 
 em {
   font-style: italic; }
