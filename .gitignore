@@ -4,3 +4,4 @@ node_modules
 css/*.map
 
 npm-debug.log
+.DS_Store
