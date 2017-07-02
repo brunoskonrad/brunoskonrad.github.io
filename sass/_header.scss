@@ -1,33 +1,28 @@
-$background-size: 250px;
-
 .header {
-  height: 300px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  &__background {
-    width: $background-size;
-    height: $background-size;
-
-    position: absolute;
-    z-index: 1;
-    opacity: 0.4;
-
-    background-image: url('../assets/yo.png');
-    background-size: cover;
-
-    border-radius: $background-size / 2;
-  }
+  height: calc(100vh - 6rem);
+  padding-top: 4rem;
 
   &__title {
-    text-align: center;
-    font-size: 1.6rem;
-    line-height: 2rem;
-    color: black;
+    font-size: 3rem;
+    text-transform: capitalize;
+  }
 
-    z-index: 2;
+  &__subtitle {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .header {
+    height: calc(100vh - 10rem);
+    padding-top: 8rem;
+
+    &__title {
+      font-size: 5rem;
+    }
+
+    &__subtitle {
+      font-size: 3rem;
+    }
   }
 }

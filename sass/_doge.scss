@@ -1,4 +1,7 @@
-@media (min-width: $breakpoint-desktop) {
+$breakpoint-to-show: 960px;
+$breakpoint-side-message: 1180px;
+
+@media (min-width: $breakpoint-to-show) {
   .doge {
     width: 64px;
     height: 64px;
@@ -19,13 +22,15 @@
       &::before {
         content: "follow him";
 
-        background-color: white;
+        background-color: $color-almost-white;
+        color: $color-gray-1;
+        font-size: 0.8rem;
         font-family: "Comic Sans MS", "Comic Sans", cursive;
 
         padding: 12px;
-        border-radius: 2px;
+        border-radius: 4px;
         text-align: center;
-        transform: translate(-80px, 4px);
+        transform: translate(0, -70px);
 
         position: absolute;
 
@@ -45,6 +50,16 @@
 
     100% {
       opacity: 1;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-side-message) {
+  .doge {
+    &:hover {
+      &::before {
+        transform: translate(-80px, 4px);
+      }
     }
   }
 }

@@ -4,18 +4,38 @@
 @import 'container';
 @import 'header';
 @import 'main';
+@import 'footer';
+@import 'find-me';
 
 @import 'doge';
 
 :root {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 body {
-  background: #56ab2f;
-  background: linear-gradient(to right, #a8e063, #56ab2f);
+  background: $main-color;
+  color: $color-almost-white;
+  font-family: Zilla Slab, serif;
+
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
-em {
-  font-style: italic;
+a {
+  color: $color-almost-white;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+::selection {
+  background: $color-gray-1;
+}
+
+@media (min-width: $breakpoint-desktop) {
+  body {
+    background: $gradient-green;
+  }
 }
