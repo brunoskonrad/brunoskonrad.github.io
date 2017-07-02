@@ -1,0 +1,50 @@
+@media (min-width: $breakpoint-desktop) {
+  .doge {
+    width: 64px;
+    height: 64px;
+
+    background-image: url(../assets/doge.svg), none;
+
+    position: fixed;
+    bottom: -30px;
+    right: 5%;
+
+    z-index: 2;
+
+    transition: all ease-in-out 100ms;
+
+    &:hover {
+      bottom: 10px;
+
+      &::before {
+        content: "follow him";
+
+        background-color: white;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+        padding: 12px;
+        border-radius: 2px;
+        text-align: center;
+        transform: translate(-80px, 4px);
+
+        position: absolute;
+
+        animation: showmessage 300ms forwards;
+      }
+    }
+  }
+
+  @keyframes showmessage {
+    0% {
+      opacity: 0
+    }
+
+    50% {
+      opacity: 0
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}

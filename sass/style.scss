@@ -2,13 +2,18 @@
 @import 'variables';
 
 @import 'container';
-@import 'read-in';
-@import 'greetings';
-@import 'about';
-@import 'footer';
+@import 'header';
+@import 'main';
+
+@import 'doge';
+
+:root {
+  font-size: 16px;
+}
 
 body {
-  background-color: $color-almost-white;
+  background: #56ab2f;
+  background: linear-gradient(to right, #a8e063, #56ab2f);
 }
 
 em {

@@ -1,0 +1,33 @@
+$background-size: 250px;
+
+.header {
+  height: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__background {
+    width: $background-size;
+    height: $background-size;
+
+    position: absolute;
+    z-index: 1;
+    opacity: 0.4;
+
+    background-image: url('../assets/yo.png');
+    background-size: cover;
+
+    border-radius: $background-size / 2;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: black;
+
+    z-index: 2;
+  }
+}
